@@ -12,6 +12,7 @@ import RxCocoa
 import RxDataSources
 import PromiseKit
 import MJRefresh
+import SDWebImage
 
 /// the list vc to show weather
 public final class FirstPageVC: UIViewController {
@@ -21,7 +22,7 @@ public final class FirstPageVC: UIViewController {
 
     @IBOutlet private weak var _searchBar: UISearchBar!
     @IBOutlet private weak var _tableView: UITableView!
-    private weak var _rightBarButtonItem: UIBarButtonItem?
+    private weak var _leftBarButtonItem: UIBarButtonItem?
 
     private let _viewModel = FirstPageVM()
     private let _disposeBag = DisposeBag()
@@ -45,15 +46,24 @@ extension FirstPageVC {
         // set tht back button title
         navigationItem.backButtonTitle = "Search"
 
-        // set tht rightBarButtonItem
-        let rightBarButtonItem = UIBarButtonItem(
+        // set tht leftBarButtonItem
+        let leftBarButtonItem = UIBarButtonItem(
             title: "search",
             style: .plain,
             target: self,
             action: #selector(_onSearchTapped)
         )
+        navigationItem.leftBarButtonItem = leftBarButtonItem
+        _leftBarButtonItem = leftBarButtonItem
+
+        // set the rightBarButtonItem
+        let rightBarButtonItem = UIBarButtonItem(
+            title: "clear all",
+            style: .plain,
+            target: self,
+            action: #selector(_onClearTapped)
+        )
         navigationItem.rightBarButtonItem = rightBarButtonItem
-        _rightBarButtonItem = rightBarButtonItem
 
         // register the cell for table view
         let nibId = UINib(
@@ -122,19 +132,19 @@ extension FirstPageVC {
         case .`init`:
             break
         case .loading:
-            _rightBarButtonItem?.isEnabled = false
-            _rightBarButtonItem?.title = "wip..."
+            _leftBarButtonItem?.isEnabled = false
+            _leftBarButtonItem?.title = "wip..."
             view.makeActivity()
             _tableView.hideEmptyView()
         case .success:
             _tableView.mj_header?.endRefreshing()
-            _rightBarButtonItem?.isEnabled = true
-            _rightBarButtonItem?.title = "search"
+            _leftBarButtonItem?.isEnabled = true
+            _leftBarButtonItem?.title = "search"
             view.hideToast()
         case .failedWith(let err):
             _tableView.mj_header?.endRefreshing()
-            _rightBarButtonItem?.isEnabled = true
-            _rightBarButtonItem?.title = "search"
+            _leftBarButtonItem?.isEnabled = true
+            _leftBarButtonItem?.title = "search"
             view.hideToast()
             view.makeToast(err.errorDescription)
         }
@@ -156,8 +166,30 @@ extension FirstPageVC {
     @objc private func _onSearchTapped() {
         _viewModel.searchTextRelay.accept(_searchBar.text ?? .emptyString)
     }
+
+    @objc private func _onClearTapped() {
+        view.makeActivity()
+        SDImageCache.shared.clearMemory()
+        SDImageCache.shared.clearDisk(onCompletion: { [weak self] in
+            self?.view.hideToast()
+            let cancel = AlertActionType(
+                title: "Sure",
+                style: .cancel,
+                handler: nil
+            )
+            self?.showAlertVcWith(
+                title: "Result",
+                message: "Cache cleared",
+                preferredStyle: .alert,
+                actions: [cancel]
+            )
+        })
+    }
 }
 
+// MARK: - AlertAble
+extension FirstPageVC: AlertAble { }
+    
 // MARK: - string extension
 extension String {
     fileprivate static let _firstPageTableViewCell = "FirstPageTableViewCell"

@@ -50,6 +50,7 @@
 		C1E3111327D5A8470009BFE0 /* FirstPageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1E3111127D5A8470009BFE0 /* FirstPageTableViewCell.xib */; };
 		C1E3111527D5AF350009BFE0 /* UITableView+EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E3111427D5AF350009BFE0 /* UITableView+EmptyView.swift */; };
 		C1E3111727D5C2EC0009BFE0 /* SecondPageVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E3111627D5C2EC0009BFE0 /* SecondPageVM.swift */; };
+		C1E3112027D5FC5B0009BFE0 /* Alertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E3111F27D5FC5B0009BFE0 /* Alertable.swift */; };
 		D8D5729527D5138A00F1E7FC /* ServerObjectsModelReq.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D5729427D5138A00F1E7FC /* ServerObjectsModelReq.swift */; };
 		D8D5729A27D5186400F1E7FC /* FirstPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D5729827D5186400F1E7FC /* FirstPageVC.swift */; };
 		D8D5729B27D5186400F1E7FC /* FirstPageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8D5729927D5186400F1E7FC /* FirstPageVC.xib */; };
@@ -129,6 +130,7 @@
 		C1E3111127D5A8470009BFE0 /* FirstPageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstPageTableViewCell.xib; sourceTree = "<group>"; };
 		C1E3111427D5AF350009BFE0 /* UITableView+EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+EmptyView.swift"; sourceTree = "<group>"; };
 		C1E3111627D5C2EC0009BFE0 /* SecondPageVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPageVM.swift; sourceTree = "<group>"; };
+		C1E3111F27D5FC5B0009BFE0 /* Alertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alertable.swift; sourceTree = "<group>"; };
 		D8D5729427D5138A00F1E7FC /* ServerObjectsModelReq.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerObjectsModelReq.swift; sourceTree = "<group>"; };
 		D8D5729827D5186400F1E7FC /* FirstPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPageVC.swift; sourceTree = "<group>"; };
 		D8D5729927D5186400F1E7FC /* FirstPageVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstPageVC.xib; sourceTree = "<group>"; };
@@ -293,6 +295,7 @@
 		C1D7973D27CF66820076B67A /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				C1E3111E27D5FC480009BFE0 /* Alertable */,
 				C1D7973E27CF66820076B67A /* Print */,
 			);
 			path = Components;
@@ -442,6 +445,14 @@
 				C1E3111127D5A8470009BFE0 /* FirstPageTableViewCell.xib */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		C1E3111E27D5FC480009BFE0 /* Alertable */ = {
+			isa = PBXGroup;
+			children = (
+				C1E3111F27D5FC5B0009BFE0 /* Alertable.swift */,
+			);
+			path = Alertable;
 			sourceTree = "<group>";
 		};
 		D8D5729627D5182500F1E7FC /* FirstPage */ = {
@@ -709,6 +720,7 @@
 				D8D5729527D5138A00F1E7FC /* ServerObjectsModelReq.swift in Sources */,
 				C1D7977B27CF66830076B67A /* Toast.swift in Sources */,
 				C1D7976127CF66830076B67A /* UIColor+Extension.swift in Sources */,
+				C1E3112027D5FC5B0009BFE0 /* Alertable.swift in Sources */,
 				C1D7977D27CF66830076B67A /* ServerTrusManager.swift in Sources */,
 				C1D7976027CF66830076B67A /* Moya+Extension.swift in Sources */,
 				C1D7977F27CF66830076B67A /* ServerRedirectHandler.swift in Sources */,

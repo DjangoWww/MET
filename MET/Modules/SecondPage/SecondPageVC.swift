@@ -29,6 +29,7 @@ public final class SecondPageVC: UIViewController {
     @IBOutlet private weak var _primaryImageViewHeight: NSLayoutConstraint!
 
     private var _objectId: Int? = nil
+    private var _objectModel: ServerObjectModelRes? = nil
 
     private let _viewModel = SecondPageVM()
     private let _disposeBag = DisposeBag()
@@ -60,6 +61,15 @@ extension SecondPageVC {
 extension SecondPageVC {
     /// setup the subviews
     private func _setUpSubviews() {
+        // set the rightBarButtonItem
+        let rightBarButtonItem = UIBarButtonItem(
+            title: "clear one",
+            style: .plain,
+            target: self,
+            action: #selector(_onClearTapped)
+        )
+        navigationItem.rightBarButtonItem = rightBarButtonItem
+
         _scrollView.mj_header = MJRefreshNormalHeader(refreshingBlock: { [weak self] in
             guard let objectId = self?._objectId else {
                 self?._scrollView.mj_header?.endRefreshing()
@@ -103,6 +113,7 @@ extension SecondPageVC {
     private func _handleObjectModel(
         _ objectModel: ServerObjectModelRes
     ) {
+        _objectModel = objectModel
         _nameLabel.text = objectModel.objectName
         _departmentLabel.text = objectModel.department
         _textView.text = "\(objectModel.jsonStringValue() ?? .emptyString)"
@@ -114,11 +125,11 @@ extension SecondPageVC {
 
         _primaryImageView.sd_imageTransition = .fade
         _primaryImageView.sd_setImage(
-            with: objectModel.primaryImage.urlValue
+            with: objectModel.primaryImageSmall.urlValue
         ) { [weak self] image, error, cacheType, url in
             guard let imageT = image else { return }
             self?._primaryImageViewHeight.constant = imageT.size.height / imageT.size.width * UIScreen.main.bounds.size.width
-            let imgArr = [objectModel.primaryImage] + objectModel.additionalImages
+            let imgArr = [objectModel.primaryImageSmall] + objectModel.additionalImages
             self?._primaryImageView.setupImageViewer(urls: imgArr.compactMap { $0.urlValue })
         }
 
@@ -126,3 +137,30 @@ extension SecondPageVC {
         SDWebImagePrefetcher.shared.prefetchURLs(objectModel.additionalImages.compactMap { $0.urlValue })
     }
 }
+
+// MARK: - actions
+extension SecondPageVC {
+    @objc private func _onClearTapped() {
+        view.makeActivity()
+        SDImageCache.shared.removeImage(
+            forKey: _objectModel?.primaryImageSmall,
+            fromDisk: true
+        ) { [weak self] in
+            self?.view.hideToast()
+            let cancel = AlertActionType(
+                title: "Sure",
+                style: .cancel,
+                handler: nil
+            )
+            self?.showAlertVcWith(
+                title: "Result",
+                message: "Cache cleared",
+                preferredStyle: .alert,
+                actions: [cancel]
+            )
+        }
+    }
+}
+
+// MARK: - AlertAble
+extension SecondPageVC: AlertAble { }
