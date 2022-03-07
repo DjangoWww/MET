@@ -12,13 +12,30 @@ import Alamofire
 
 /// Server Provider
 public final class ServerProvider {
+    /// change this variable to enable Stub or not, notice that it won't work if it's not DEBUG
+    public static var shouldUseStubClosure: Bool = true
 
-    private let _disposeBag = DisposeBag()
+    /// Initializes a provider.
+    public init(
+        endpointClosure: @escaping MoyaProvider<ServerAPI>.EndpointClosure = MoyaProvider<ServerAPI>.defaultEndpointMapping,
+        requestClosure: @escaping MoyaProvider<ServerAPI>.RequestClosure = MoyaProvider<ServerAPI>.defaultRequestMapping,
+        stubClosure: MoyaProvider<ServerAPI>.StubClosure? = nil,
+        callbackQueue: DispatchQueue? = nil,
+        session: Alamofire.Session? = nil,
+        plugins: [PluginType]? = nil,
+        trackInflights: Bool = false
+    ) {
 
-    /// real provider to fire a request
-    private let _provider = MoyaProvider<ServerAPI>(
-        callbackQueue: .global(),
-        session: { () -> Session in
+        let stubClosureT: MoyaProvider<ServerAPI>.StubClosure
+        #if DEBUG
+        stubClosureT = stubClosure ?? (ServerProvider.shouldUseStubClosure ? MoyaProvider<ServerAPI>.delayedStub(3) : MoyaProvider<ServerAPI>.neverStub)
+        #else
+        stubClosureT = stubClosure ?? MoyaProvider<ServerAPI>.neverStub
+        #endif
+
+        let callbackQueueT = callbackQueue ?? .global()
+
+        let sessionT = session ?? { () -> Session in
             // special setUp
             let requestInterceptor = ServerRequestInterceptor()
             let serverTrustManager = ServerTrusManager()
@@ -33,10 +50,27 @@ public final class ServerProvider {
                            serverTrustManager: serverTrustManager,
                            redirectHandler: redirectHandler,
                            cachedResponseHandler: nil,
-                           eventMonitors: []) }(),
-        plugins: [NetWorksLoggerPlugin(),
-                  NetWorksActivityPlugin()]
-    )
+                           eventMonitors: [])
+        }()
+
+        let pluginsT = plugins ?? [NetWorksLoggerPlugin(),
+                                   NetWorksActivityPlugin()]
+
+        _provider = MoyaProvider<ServerAPI>(
+            endpointClosure: endpointClosure,
+            requestClosure: requestClosure,
+            stubClosure: stubClosureT,
+            callbackQueue: callbackQueueT,
+            session: sessionT,
+            plugins: pluginsT,
+            trackInflights: trackInflights
+        )
+    }
+
+    private let _disposeBag = DisposeBag()
+
+    /// real provider to fire a request
+    private let _provider: MoyaProvider<ServerAPI>
 
     /// request
     ///
