@@ -12,6 +12,8 @@ target 'MET' do
   pod 'RxCocoa', '5.1.1'
   pod 'MJRefresh', '3.4.3'
   pod 'SDWebImage', '5.12.3'
+  pod 'ImageViewer.swift', '3.3.3'
+  pod 'ImageViewer.swift/Fetcher', '3.3.3'
 
 end
 

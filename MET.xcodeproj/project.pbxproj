@@ -44,6 +44,20 @@
 		C1D7978227CF66830076B67A /* NetWorksActivityPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D7975B27CF66830076B67A /* NetWorksActivityPlugin.swift */; };
 		C1D7978327CF66830076B67A /* NetWorksIndicatorScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D7975C27CF66830076B67A /* NetWorksIndicatorScheduler.swift */; };
 		C1D7978A27CF6BC10076B67A /* ServerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D7978927CF6BC10076B67A /* ServerAPI.swift */; };
+		C1E3110D27D5A7CF0009BFE0 /* SecondPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E3110B27D5A7CF0009BFE0 /* SecondPageVC.swift */; };
+		C1E3110E27D5A7CF0009BFE0 /* SecondPageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1E3110C27D5A7CF0009BFE0 /* SecondPageVC.xib */; };
+		C1E3111227D5A8470009BFE0 /* FirstPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E3111027D5A8470009BFE0 /* FirstPageTableViewCell.swift */; };
+		C1E3111327D5A8470009BFE0 /* FirstPageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1E3111127D5A8470009BFE0 /* FirstPageTableViewCell.xib */; };
+		C1E3111527D5AF350009BFE0 /* UITableView+EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E3111427D5AF350009BFE0 /* UITableView+EmptyView.swift */; };
+		C1E3111727D5C2EC0009BFE0 /* SecondPageVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E3111627D5C2EC0009BFE0 /* SecondPageVM.swift */; };
+		D8D5729527D5138A00F1E7FC /* ServerObjectsModelReq.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D5729427D5138A00F1E7FC /* ServerObjectsModelReq.swift */; };
+		D8D5729A27D5186400F1E7FC /* FirstPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D5729827D5186400F1E7FC /* FirstPageVC.swift */; };
+		D8D5729B27D5186400F1E7FC /* FirstPageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8D5729927D5186400F1E7FC /* FirstPageVC.xib */; };
+		D8D572A127D5189200F1E7FC /* FirstPageVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D572A027D5189200F1E7FC /* FirstPageVM.swift */; };
+		D8D572A327D5190200F1E7FC /* ServerObjectsModelRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D572A227D5190200F1E7FC /* ServerObjectsModelRes.swift */; };
+		D8D572A527D51E0400F1E7FC /* ServerObjectModelRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D572A427D51E0400F1E7FC /* ServerObjectModelRes.swift */; };
+		D8D572A727D5260300F1E7FC /* ServerDepartmentsModelRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D572A627D5260300F1E7FC /* ServerDepartmentsModelRes.swift */; };
+		D8D572A927D527F800F1E7FC /* ServerSearchModelReq.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D572A827D527F800F1E7FC /* ServerSearchModelReq.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +123,20 @@
 		C1D7975B27CF66830076B67A /* NetWorksActivityPlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetWorksActivityPlugin.swift; sourceTree = "<group>"; };
 		C1D7975C27CF66830076B67A /* NetWorksIndicatorScheduler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetWorksIndicatorScheduler.swift; sourceTree = "<group>"; };
 		C1D7978927CF6BC10076B67A /* ServerAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerAPI.swift; sourceTree = "<group>"; };
+		C1E3110B27D5A7CF0009BFE0 /* SecondPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPageVC.swift; sourceTree = "<group>"; };
+		C1E3110C27D5A7CF0009BFE0 /* SecondPageVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondPageVC.xib; sourceTree = "<group>"; };
+		C1E3111027D5A8470009BFE0 /* FirstPageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPageTableViewCell.swift; sourceTree = "<group>"; };
+		C1E3111127D5A8470009BFE0 /* FirstPageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstPageTableViewCell.xib; sourceTree = "<group>"; };
+		C1E3111427D5AF350009BFE0 /* UITableView+EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+EmptyView.swift"; sourceTree = "<group>"; };
+		C1E3111627D5C2EC0009BFE0 /* SecondPageVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPageVM.swift; sourceTree = "<group>"; };
+		D8D5729427D5138A00F1E7FC /* ServerObjectsModelReq.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerObjectsModelReq.swift; sourceTree = "<group>"; };
+		D8D5729827D5186400F1E7FC /* FirstPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPageVC.swift; sourceTree = "<group>"; };
+		D8D5729927D5186400F1E7FC /* FirstPageVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstPageVC.xib; sourceTree = "<group>"; };
+		D8D572A027D5189200F1E7FC /* FirstPageVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPageVM.swift; sourceTree = "<group>"; };
+		D8D572A227D5190200F1E7FC /* ServerObjectsModelRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerObjectsModelRes.swift; sourceTree = "<group>"; };
+		D8D572A427D51E0400F1E7FC /* ServerObjectModelRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerObjectModelRes.swift; sourceTree = "<group>"; };
+		D8D572A627D5260300F1E7FC /* ServerDepartmentsModelRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerDepartmentsModelRes.swift; sourceTree = "<group>"; };
+		D8D572A827D527F800F1E7FC /* ServerSearchModelReq.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerSearchModelReq.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +216,7 @@
 				C1D7973D27CF66820076B67A /* Components */,
 				C1D7978727CF6BA00076B67A /* Constants */,
 				C1D7972827CF66820076B67A /* Extensions */,
+				C1D7978B27CF6DFC0076B67A /* Modules */,
 				C1D7978427CF668B0076B67A /* Resources */,
 				C1D7975127CF66830076B67A /* Service */,
 				C1D7974C27CF66830076B67A /* Vendors */,
@@ -241,6 +270,7 @@
 				C1D7973127CF66820076B67A /* UIView+ContainingVC.swift */,
 				C1D7973227CF66820076B67A /* UINavigationController+Pop.swift */,
 				C1D7973327CF66820076B67A /* UIView+Rotate.swift */,
+				C1E3111427D5AF350009BFE0 /* UITableView+EmptyView.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -377,8 +407,52 @@
 			isa = PBXGroup;
 			children = (
 				C1D7978927CF6BC10076B67A /* ServerAPI.swift */,
+				D8D5729427D5138A00F1E7FC /* ServerObjectsModelReq.swift */,
+				D8D572A227D5190200F1E7FC /* ServerObjectsModelRes.swift */,
+				D8D572A427D51E0400F1E7FC /* ServerObjectModelRes.swift */,
+				D8D572A627D5260300F1E7FC /* ServerDepartmentsModelRes.swift */,
+				D8D572A827D527F800F1E7FC /* ServerSearchModelReq.swift */,
 			);
 			path = ServerAPI;
+			sourceTree = "<group>";
+		};
+		C1D7978B27CF6DFC0076B67A /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				D8D5729627D5182500F1E7FC /* FirstPage */,
+				C1E3110A27D5A7B80009BFE0 /* SecondPage */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		C1E3110A27D5A7B80009BFE0 /* SecondPage */ = {
+			isa = PBXGroup;
+			children = (
+				C1E3110B27D5A7CF0009BFE0 /* SecondPageVC.swift */,
+				C1E3110C27D5A7CF0009BFE0 /* SecondPageVC.xib */,
+				C1E3111627D5C2EC0009BFE0 /* SecondPageVM.swift */,
+			);
+			path = SecondPage;
+			sourceTree = "<group>";
+		};
+		C1E3110F27D5A81B0009BFE0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C1E3111027D5A8470009BFE0 /* FirstPageTableViewCell.swift */,
+				C1E3111127D5A8470009BFE0 /* FirstPageTableViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D8D5729627D5182500F1E7FC /* FirstPage */ = {
+			isa = PBXGroup;
+			children = (
+				D8D5729827D5186400F1E7FC /* FirstPageVC.swift */,
+				D8D5729927D5186400F1E7FC /* FirstPageVC.xib */,
+				D8D572A027D5189200F1E7FC /* FirstPageVM.swift */,
+				C1E3110F27D5A81B0009BFE0 /* Views */,
+			);
+			path = FirstPage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -489,8 +563,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1E3111327D5A8470009BFE0 /* FirstPageTableViewCell.xib in Resources */,
 				C1D7970027CF54E50076B67A /* LaunchScreen.storyboard in Resources */,
 				C1D796FD27CF54E50076B67A /* Assets.xcassets in Resources */,
+				D8D5729B27D5186400F1E7FC /* FirstPageVC.xib in Resources */,
+				C1E3110E27D5A7CF0009BFE0 /* SecondPageVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -601,13 +678,21 @@
 				C1D7976427CF66830076B67A /* UIView+Awakable.swift in Sources */,
 				C1D7976727CF66830076B67A /* UINavigationController+Pop.swift in Sources */,
 				C1D7976927CF66830076B67A /* Int+Extension.swift in Sources */,
+				C1E3111727D5C2EC0009BFE0 /* SecondPageVM.swift in Sources */,
 				C1D7976E27CF66830076B67A /* Sequence+Extension.swift in Sources */,
 				C1D7976A27CF66830076B67A /* Error+Extension.swift in Sources */,
+				C1E3110D27D5A7CF0009BFE0 /* SecondPageVC.swift in Sources */,
 				C1D7978A27CF6BC10076B67A /* ServerAPI.swift in Sources */,
 				C1D7977127CF66830076B67A /* Print.swift in Sources */,
+				D8D572A527D51E0400F1E7FC /* ServerObjectModelRes.swift in Sources */,
+				D8D572A927D527F800F1E7FC /* ServerSearchModelReq.swift in Sources */,
+				D8D572A127D5189200F1E7FC /* FirstPageVM.swift in Sources */,
 				C1D796F427CF54E40076B67A /* AppDelegate.swift in Sources */,
+				D8D5729A27D5186400F1E7FC /* FirstPageVC.swift in Sources */,
 				C1D7976F27CF66830076B67A /* Codable+Extension.swift in Sources */,
+				D8D572A327D5190200F1E7FC /* ServerObjectsModelRes.swift in Sources */,
 				C1D7978227CF66830076B67A /* NetWorksActivityPlugin.swift in Sources */,
+				C1E3111227D5A8470009BFE0 /* FirstPageTableViewCell.swift in Sources */,
 				C1D7978127CF66830076B67A /* NetWorksLoggerPlugin.swift in Sources */,
 				C1D7976827CF66830076B67A /* UIView+Rotate.swift in Sources */,
 				C1D7976327CF66830076B67A /* UIView+Frame.swift in Sources */,
@@ -617,8 +702,11 @@
 				C1D7976C27CF66830076B67A /* URL+Extension.swift in Sources */,
 				C1D7976B27CF66830076B67A /* NonIntegerNumber+Extension.swift in Sources */,
 				C1D7977A27CF66830076B67A /* Then.swift in Sources */,
+				C1E3111527D5AF350009BFE0 /* UITableView+EmptyView.swift in Sources */,
 				C1D7978027CF66830076B67A /* ServerModelTypeRes.swift in Sources */,
 				C1D7976627CF66830076B67A /* UIView+ContainingVC.swift in Sources */,
+				D8D572A727D5260300F1E7FC /* ServerDepartmentsModelRes.swift in Sources */,
+				D8D5729527D5138A00F1E7FC /* ServerObjectsModelReq.swift in Sources */,
 				C1D7977B27CF66830076B67A /* Toast.swift in Sources */,
 				C1D7976127CF66830076B67A /* UIColor+Extension.swift in Sources */,
 				C1D7977D27CF66830076B67A /* ServerTrusManager.swift in Sources */,
@@ -795,8 +883,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MET/Resources/Plists/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -812,6 +901,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.djTest.MET;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -824,8 +914,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MET/Resources/Plists/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -841,6 +932,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.djTest.MET;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

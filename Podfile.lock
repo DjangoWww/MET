@@ -1,6 +1,9 @@
 PODS:
   - Alamofire (5.0.0-beta.7)
   - Differentiator (4.0.1)
+  - ImageViewer.swift (3.3.3)
+  - ImageViewer.swift/Fetcher (3.3.3):
+    - SDWebImage
   - MJRefresh (3.4.3)
   - Moya/Core (14.0.0-alpha.2):
     - Alamofire (= 5.0.0-beta.7)
@@ -35,6 +38,8 @@ PODS:
   - SDWebImage/Core (5.12.3)
 
 DEPENDENCIES:
+  - ImageViewer.swift (= 3.3.3)
+  - ImageViewer.swift/Fetcher (= 3.3.3)
   - MJRefresh (= 3.4.3)
   - Moya/RxSwift (= 14.0.0-alpha.2)
   - PromiseKit (= 6.10.0)
@@ -48,6 +53,7 @@ SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Alamofire
     - Differentiator
+    - ImageViewer.swift
     - MJRefresh
     - Moya
     - PromiseKit
@@ -62,6 +68,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: bd07938ceecad59d2492aeecb1f785a8f2721160
   Differentiator: 886080237d9f87f322641dedbc5be257061b0602
+  ImageViewer.swift: 3dbb74a68ac4bdd6cdd585b3128dae17ccd733e5
   MJRefresh: 53e3e3219f204425ee6d3e62e8733d3295944cd6
   Moya: a6f1894cf6baec301aa02b0ecf10e5d8ade556ae
   PromiseKit: 1fdaeb6c0a94a5114fcb814ff3d772b86886ad4e
@@ -73,6 +80,6 @@ SPEC CHECKSUMS:
   RxTest: 937ba521d3f6dca7db49f76cd5d372cfce6091cb
   SDWebImage: 53179a2dba77246efa8a9b85f5c5b21f8f43e38f
 
-PODFILE CHECKSUM: ce2c592b2cd1c6754cee530284a1b78d827671d3
+PODFILE CHECKSUM: 53332cdd37e90fd511cd18d9c225a6da5b76a504
 
 COCOAPODS: 1.11.2

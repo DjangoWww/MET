@@ -30,9 +30,9 @@ extension AppDelegate {
         #endif
         ToastManager.shared.duration = toastDuration
 
-        let mainVC = UIViewController().then { $0.view.backgroundColor = .random }
+        let mainVC = FirstPageVC()
         let naviVC = UINavigationController(rootViewController: mainVC)
-        naviVC.navigationBar.tintColor = .blue // setup the tintColor
+        naviVC.navigationBar.tintColor = .black // setup the tintColor
         let window = UIWindow()
         window.rootViewController = naviVC
         self.window = window
