@@ -33,6 +33,34 @@ public struct ServerSearchModelReq: Codable {
     let dateBegin: String?
     let dateEnd: String?
 
+    public init(
+        q: String,
+        isHighlight: Bool? = nil,
+        title: Bool? = nil,
+        tags: Bool? = nil,
+        departmentId: Int? = nil,
+        isOnView: Bool? = nil,
+        artistOrCulture: Bool? = nil,
+        medium: String? = nil,
+        hasImages: Bool? = nil,
+        geoLocation: String? = nil,
+        dateBegin: String? = nil,
+        dateEnd: String? = nil
+    ) {
+        self.q = q
+        self.isHighlight = isHighlight
+        self.title = title
+        self.tags = tags
+        self.departmentId = departmentId
+        self.isOnView = isOnView
+        self.artistOrCulture = artistOrCulture
+        self.medium = medium
+        self.hasImages = hasImages
+        self.geoLocation = geoLocation
+        self.dateBegin = dateBegin
+        self.dateEnd = dateEnd
+    }
+
     public func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encode(q, forKey: .q)
